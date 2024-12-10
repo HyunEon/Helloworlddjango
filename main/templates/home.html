@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <h3>장고로 만든 첫 페이지</h3>
+    <p>현재 시간은 {{ date }}, {{ time }}입니다.</p>
+    <!-- 생각 없이 {{ motivationquotes.name }} {{ motivationquotes.quotes }} 이렇게 했더니 공백으로 출력되서 검색해보니 반복문을 넣어야 제대로 출력되는 것 같음 -->
+    <ul> {% for quote in motivationquotes %} 
+        <li> {{ quote.name }} - {{ quote.quotes }} </li> 
+         {% endfor %}
+    </ul>
+</body>
+</html>
